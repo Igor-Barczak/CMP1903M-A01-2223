@@ -49,8 +49,6 @@ namespace CMP1903M_A01_2223
                 {
                     throw new ArgumentException("Cannot deal more cards than left in the pack");
                 }
-                //drawnCards.Add(pack[i]);
-                //pack.RemoveAt(0);
                 drawnCards.Add(Pack.deal());
 
             }
