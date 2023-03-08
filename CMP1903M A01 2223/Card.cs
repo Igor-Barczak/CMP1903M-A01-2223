@@ -34,10 +34,8 @@ namespace CMP1903M_A01_2223
         {
             string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
             string[] values = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
-            string suitString = suits[Suit];
-            string valueString = values[Value];
             //Return the string representation of the string
-            return ($"{valueString} of {suitString}");
+            return ($"{values[Value]} of {suits[Suit]}");
         }
     }
 }
