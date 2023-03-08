@@ -8,6 +8,7 @@ namespace CMP1903M_A01_2223
 {
     class Program
     {
+        //Program that calls the testing class to check all the methods run as intended
         static void Main(string[] args)
         {
             Testing test = new Testing();

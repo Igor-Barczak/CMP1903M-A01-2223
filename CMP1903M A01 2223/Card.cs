@@ -16,6 +16,7 @@ namespace CMP1903M_A01_2223
         public int Value { get; set; }
         public int Suit { get; set; }
 
+        //Card constructor that takes integers as parameters and sets the values of the cards
         public Card(int value, int suit)
         {
             if (value < 0 || value > 12)
@@ -29,7 +30,8 @@ namespace CMP1903M_A01_2223
             }
             Suit = suit;
         }
-
+        //Converts the card object to string so that it can be printed to the terminal
+        //with the addition of face values
         public override string ToString()
         {
             string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };

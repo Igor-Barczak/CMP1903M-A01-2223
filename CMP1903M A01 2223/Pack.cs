@@ -9,6 +9,7 @@ namespace CMP1903M_A01_2223
 {
     class Pack
     {
+        //Initialises the pack
         public static List<Card> pack = new List<Card>();
 
 
@@ -26,6 +27,8 @@ namespace CMP1903M_A01_2223
 
         }
 
+        //Shuffle method that takes an integer argument for type of shuffle
+        //
         public static bool shuffleCardPack(int typeOfShuffle)
         {
             //Shuffles the pack based on the type of shuffle
@@ -44,11 +47,16 @@ namespace CMP1903M_A01_2223
                         pack[i] = temp;
                     }
                     return true;
+                //Splits the pack in half by creating two new arrays
+                //Creates another array for the shuffled cards which will replace the current pack
                 case 2:
                     int half = pack.Count / 2;
                     List<Card> topHalf = pack.GetRange(0, half);
                     List<Card> bottomHalf = pack.GetRange(half, half);
                     List<Card> shuffledPack = new List<Card>();
+                    //Replicates a riffle shuffle by choosing one of the temporary arrays at random and
+                    //taking the top card at index 0 and adding it to the shuffledPack array
+                    //until the length of the temporary arrays reaches 0
                     while(topHalf.Count > 0  && bottomHalf.Count > 0)
                     {
                         int randNum = random.Next(1, 100);
@@ -73,6 +81,7 @@ namespace CMP1903M_A01_2223
                     return false;
             }
         }
+        //Deals a single card from the top of the pack and then removes it
         public static Card deal()
         {
             //Deals one card
@@ -80,6 +89,8 @@ namespace CMP1903M_A01_2223
             pack.RemoveAt(0);
             return card;
         }
+        //Deals a selected number of cards from the pack by using a for loop and calling the deal card
+        //method by the amount of times passed in the argument
         public static List<Card> dealCard(int amount)
         {
             //Deals the number of cards specified by 'amount'
