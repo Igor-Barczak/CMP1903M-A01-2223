@@ -13,6 +13,7 @@ namespace CMP1903M_A01_2223
         {
             Testing test = new Testing();
             test.runTest();
+            Console.ReadLine();
         }
     }
 }

@@ -19,6 +19,9 @@ namespace CMP1903M_A01_2223
         //Card constructor that takes integers as parameters and sets the values of the cards
         public Card(int value, int suit)
         {
+            //These if statements check if the value being set is in the correct range
+            //for example there are 13 values for the card so it makes sures only values
+            //between 0 and 12 are set.
             if (value < 0 || value > 12)
             {
                 throw new ArgumentException("Value must be between 1 and 13");
@@ -32,6 +35,7 @@ namespace CMP1903M_A01_2223
         }
         //Converts the card object to string so that it can be printed to the terminal
         //with the addition of face values
+        //This is an additional method 
         public override string ToString()
         {
             string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
